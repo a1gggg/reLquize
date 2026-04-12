@@ -1,11 +1,30 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import React from "react";
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+// React Native
+import { View, StyleSheet, Platform } from "react-native";
+import { Text } from "react-native"; // если нужно
+
+// Expo
+import { Image } from "expo-image";
+import { Link } from "expo-router";
+
+// i18n
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "@/src/i18n";
+
+// Компоненты
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { HelloWave } from "@/components/hello-wave";
+import ParallaxScrollView from "@/components/parallax-scroll-view";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
+//import { MyScreen } from "@/components/MyScreen";
+import { Step_1 } from "@/src/locales/interfaceTextComponents/Step1";
+import { Step_2 } from "@/src/locales/interfaceTextComponents/Step2";
+import { Step_3 } from "@/src/locales/interfaceTextComponents/Step3";
+
+// ❗ УБРАНО: Stack.Screen — его нельзя использовать внутри обычного компонента
+// Если нужен экран MyScreen — добавь его в router/navigation, а не сюда.
 
 export default function HomeScreen() {
   return (
@@ -21,9 +40,13 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">LingQuiz</ThemedText>
         <HelloWave />
+        <LanguageSwitcher />
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Create new list</ThemedText>
+        <ThemedText type="subtitle">
+          <Step_1 />
+        </ThemedText>
         <ThemedText>
           Create{" "}
           <ThemedText type="defaultSemiBold">
@@ -32,32 +55,12 @@ export default function HomeScreen() {
           in which we add the necessary words or kanji with translation.
         </ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Take the quiz</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction
-              title="Action"
-              icon="cube"
-              onPress={() => alert("Action pressed")}
-            />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert("Share pressed")}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert("Delete pressed")}
-              />
-            </Link.Menu>
-          </Link.Menu>
+          <ThemedText type="subtitle">
+            <Step_2 />
+          </ThemedText>
         </Link>
 
         <ThemedText>
@@ -68,23 +71,34 @@ export default function HomeScreen() {
           go to your quiz and take it.
         </ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Review your results</ThemedText>
+        <ThemedText type="subtitle">
+          <Step_3 />
+        </ThemedText>
         <ThemedText>
           {`Open your result `}
           <ThemedText type="defaultSemiBold">(Open tab Results)</ThemedText> and
-          review your <ThemedText type="defaultSemiBold">result.</ThemedText>{" "}
-
+          review your{" "}
+          <ThemedText type="defaultSemiBold">result.</ThemedText>{" "}
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
 }
 
+export function SettingsScreen() {
+  return (
+    <View>
+      <LanguageSwitcher />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
   },
   stepContainer: {
@@ -96,6 +110,6 @@ const styles = StyleSheet.create({
     width: 290,
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    position: "absolute",
   },
 });
