@@ -5,5 +5,10 @@
   "_change_language": "Change languag",
   "_step_1": "Step 1: Create new list",
   "_step_2": "Step 2: Take the quiz",
-  "_step_3": "Step 3: Review your results"
+  "_step_3": "Step 3: Review your results",
+  "_home": "Home",
+  "_list": "List",
+  "_words": "Words",
+  "_kanji": "Kanji",
+  "_games": "Games"
 }

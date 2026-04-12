@@ -1,0 +1,6 @@
+cd ./lingquiz  //переход к папке проекта
+npx expo start --tunnel запуск чтобы зайти с телефона
+npx expo start -c      перезапуск
+git add .
+git commit -m ""
+git push
