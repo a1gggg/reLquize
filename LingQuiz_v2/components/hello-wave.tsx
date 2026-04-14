@@ -22,35 +22,24 @@ export function HelloWave() {
 import React, { useRef, useEffect, useState } from "react";
 import { Animated, Easing, Pressable, View, StyleSheet } from "react-native";
 import * as Haptics from "expo-haptics";
-import { Audio } from "expo-av";
+import { useAudioPlayer } from "expo-audio";
 
 export function HelloWave() {
   const rotateAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(1)).current;
 
-  const [particles, setParticles] = useState([]);
+  interface Particle {
+    id: number;
+    anim: Animated.Value;
+    angle: number;
+  }
+  const [particles, setParticles] = useState<Particle[]>([]);
 
-  const runningAnimRef = useRef(null);
-  const soundRef = useRef(null);
 
-  useEffect(() => {
-    loadSound();
-    return () => {
-      if (runningAnimRef.current) {
-        runningAnimRef.current.stop();
-      }
-      if (soundRef.current) {
-        soundRef.current.unloadAsync();
-      }
-    };
-  }, []);
+const runningAnimRef = useRef<Animated.CompositeAnimation | null>(null);
 
-  const loadSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/sounds/pop.mp3"),
-    );
-    soundRef.current = sound;
-  };
+  // 🔥 Новый API: создаём плеер через хук
+  const player = useAudioPlayer(require("@/assets/sounds/pop.mp3"));
 
   const spawnParticles = () => {
     const arr = [];
@@ -76,18 +65,13 @@ export function HelloWave() {
   };
 
   const runWave = async () => {
-    // вибрация
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
 
-    // звук
-    if (soundRef.current) {
-      await soundRef.current.replayAsync();
-    }
+    // 🔥 Новый API: просто player.play()
+    player.play();
 
-    // частицы
     spawnParticles();
 
-    // остановить текущую анимацию
     if (runningAnimRef.current) {
       runningAnimRef.current.stop();
       runningAnimRef.current = null;
@@ -96,7 +80,6 @@ export function HelloWave() {
     rotateAnim.setValue(0);
     scaleAnim.setValue(1);
 
-    // волна
     const wave = Animated.sequence([
       Animated.timing(rotateAnim, {
         toValue: 1,
@@ -124,25 +107,19 @@ export function HelloWave() {
       }),
     ]);
 
-    // пружина (взрыв пузырька)
     const bubble = Animated.sequence([
-      // быстрое уменьшение
       Animated.timing(scaleAnim, {
         toValue: 0.9,
         duration: 80,
         easing: Easing.out(Easing.quad),
         useNativeDriver: true,
       }),
-
-      // быстрое увеличение
       Animated.timing(scaleAnim, {
         toValue: 1.15,
         duration: 90,
         easing: Easing.out(Easing.quad),
         useNativeDriver: true,
       }),
-
-      // мягкий возврат (spring)
       Animated.spring(scaleAnim, {
         toValue: 1,
         friction: 6,
@@ -166,15 +143,7 @@ export function HelloWave() {
 
   return (
     <Pressable onPress={runWave} hitSlop={8}>
-      <View
-        style={{
-          width: 60,
-          height: 60,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {/* частицы */}
+      <View style={styles.container}>
         {particles.map((p) => {
           const translateX = p.anim.interpolate({
             inputRange: [0, 1],
@@ -203,7 +172,6 @@ export function HelloWave() {
           );
         })}
 
-        {/* иконка */}
         <Animated.Image
           source={require("@/assets/images/iconling.png")}
           style={{
@@ -218,6 +186,12 @@ export function HelloWave() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: 60,
+    height: 60,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   particle: {
     position: "absolute",
     width: 6,

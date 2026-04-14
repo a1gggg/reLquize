@@ -14,3 +14,11 @@ git push
 //14.04
 git commit -m "npx expo install expo-av // install expo av from hello-wave animated"
 git commit -m "Add new logo from an old project, animated hellowave remains with errors but works"
+Через ошибку  WARN  [expo-av]: Expo AV has been deprecated and will be removed in SDK 54. Use the `expo-audio` and `expo-video` packages to replace the required functionality. 
+Переустанавливаю expo-av на отдельные audio and video
+npx expo uninstall expo-av
+npx expo install expo-audio
+npx expo install expo-video
+и меняю импорт на import { Audio } from "expo-audio";
+исправляем все ошибки в файле hellowave
+git commit -m "  We correct all errors in the files hello-wave animated"
