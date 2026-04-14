@@ -5,9 +5,12 @@ import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { Link, useRouter } from "expo-router";
+import { HeaderButton } from "@/components/menuIndexPage/menuIndexPageHeaderButton";
+
 
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -20,7 +23,13 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        
+        <HeaderButton
+          onPress={() => router.push("/Menu")}
+          icon={require("@/assets/images/menu.png")}
+        />
+
+        <ThemedText type="title">LingQuiz</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -92,7 +101,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
+    gap: 10,
   },
   stepContainer: {
     gap: 8,

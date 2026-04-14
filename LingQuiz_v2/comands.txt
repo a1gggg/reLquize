@@ -22,6 +22,9 @@ npx expo install expo-video
 и меняю импорт на import { Audio } from "expo-audio";
 исправляем все ошибки в файле hellowave
 git commit -m "  We correct all errors in the files hello-wave animated"
+git commit -m "  Resizing Pralax and the image inside. Compatibility tests and fixes."
+//Скрываем хеадер с помощью изменения его высоты на 0. см паралакс скрол виев в компонентах
+git commit -m "  We create a menu on the main page that opens a modal window."
 
 --------------------
 npx expo doctor  проверка конфликтов
@@ -31,4 +34,3 @@ npm ls  проверить ошибки в зависимостях
 npm dedupe конфликты в ноде модулях
 ---------------------
 
-git commit -m "  We correct all errors in the files hello-wave animated"

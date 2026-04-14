@@ -11,7 +11,7 @@ import { ThemedView } from '@/components/themed-view';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
 
-const HEADER_HEIGHT = 100;
+const HEADER_HEIGHT = 0; // было 100, но чтобы скрыть поставил 0
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
