@@ -13,3 +13,4 @@ git push
 
 //14.04
 git commit -m "npx expo install expo-av // install expo av from hello-wave animated"
+git commit -m "Add new logo from an old project, animated hellowave remains with errors but works"
