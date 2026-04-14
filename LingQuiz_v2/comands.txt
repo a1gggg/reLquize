@@ -22,3 +22,13 @@ npx expo install expo-video
 и меняю импорт на import { Audio } from "expo-audio";
 исправляем все ошибки в файле hellowave
 git commit -m "  We correct all errors in the files hello-wave animated"
+
+--------------------
+npx expo doctor  проверка конфликтов
+npx expo start -c      перезапуск
+npx expo install --check проверить ошибки в зависимостях
+npm ls  проверить ошибки в зависимостях
+npm dedupe конфликты в ноде модулях
+---------------------
+
+git commit -m "  We correct all errors in the files hello-wave animated"
