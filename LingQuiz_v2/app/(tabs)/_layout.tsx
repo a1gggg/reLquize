@@ -12,22 +12,54 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Home",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="house.fill" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="list"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "List",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="book" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="words"
+        options={{
+          title: "Words",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="textformat" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="kanji"
+        options={{
+          title: "Kanji",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="text.cursor" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="games"
+        options={{
+          title: "Games",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="character.textbox" color={color} />
+          ),
         }}
       />
     </Tabs>
