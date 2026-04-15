@@ -5,7 +5,7 @@ import { useThemeColor } from '@/hooks/use-theme-color';
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
   darkColor?: string;
-  type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link';
+  type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link" | "link_back";
 };
 
 export function ThemedText({
@@ -21,11 +21,12 @@ export function ThemedText({
     <Text
       style={[
         { color },
-        type === 'default' ? styles.default : undefined,
-        type === 'title' ? styles.title : undefined,
-        type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        type === 'subtitle' ? styles.subtitle : undefined,
-        type === 'link' ? styles.link : undefined,
+        type === "default" ? styles.default : undefined,
+        type === "title" ? styles.title : undefined,
+        type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
+        type === "subtitle" ? styles.subtitle : undefined,
+        type === "link" ? styles.link : undefined,
+        type === "link_back" ? styles.link_back : undefined,
         style,
       ]}
       {...rest}
@@ -41,20 +42,29 @@ const styles = StyleSheet.create({
   defaultSemiBold: {
     fontSize: 16,
     lineHeight: 24,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     lineHeight: 32,
   },
   subtitle: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   link: {
     lineHeight: 30,
     fontSize: 16,
-    color: '#0a7ea4',
+    color: "#2CD8CC",
+  },
+  link_back: {
+    lineHeight: 30,
+    fontSize: 25,
+    color: "#030000",
+    fontWeight: "900",
+    //backgroundColor: "#2CD8CC",
+    //marginBottom: 15,
+    // paddingVertical: 15,
   },
 });

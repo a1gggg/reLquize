@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     left: "0%",
   },
   buttonPressed: {
-    backgroundColor: "rgba(201, 201, 201, 0.52)",
+    backgroundColor: "#2CD8CC",
   },
   text: {
     color: "#000000",
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 22,
     height: 22,
-    tintColor: "#000000",
+    tintColor: "#2CD8CC",
     left: "0%",
     flexDirection: "row",
   },

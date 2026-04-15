@@ -22,6 +22,7 @@ const MAPPING = {
   "textformat": "text-fields",
   "text.cursor": "brush",
   "character.textbox": "videogame-asset",
+  "square.and.pencil": "close",
 } as unknown as IconMapping;
 
 /**

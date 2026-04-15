@@ -27,6 +27,9 @@ git commit -m "  Resizing Pralax and the image inside. Compatibility tests and f
 git commit -m "  We create a menu on the main page that opens a modal window."
 git commit -m "  Image resizing check on Doctor Expo - OK"
 git commit -m "  Add bottom menu and icon export from expo. Check - OK"
+https://icons.expo.fyi/Index
+
+#2CD8CC
 --------------------
 npx expo doctor  проверка конфликтов
 npx expo start -c      перезапуск

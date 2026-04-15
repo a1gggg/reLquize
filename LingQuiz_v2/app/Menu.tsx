@@ -3,14 +3,17 @@ import { StyleSheet } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-
+import { IconSymbol } from "@/components/ui/icon-symbol";
 
 export default function ModalScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal213123</ThemedText>
+      <ThemedText type="title">Hi!</ThemedText>
+      <ThemedText type="subtitle">Сhange language</ThemedText>
       <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
+        <ThemedText type="link_back">
+          <IconSymbol size={38} name="square.and.pencil" color={""} />
+        </ThemedText>
       </Link>
     </ThemedView>
   );
@@ -18,16 +21,19 @@ export default function ModalScreen() {
 
 
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "baseline",
+    justifyContent: "flex-start",
     padding: 20,
   },
   link: {
-    marginTop: 15,
-    paddingVertical: 15,
+    marginTop: 250,
+    marginLeft: 300,
+    alignItems: "baseline",
+    paddingBottom: "auto",
+    paddingVertical: "100%",
   },
+  link_back: {},
 });

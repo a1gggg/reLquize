@@ -197,6 +197,6 @@ const styles = StyleSheet.create({
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: "#4fc7ff",
+    backgroundColor: "#2CD8CC",
   },
 });
