@@ -1,0 +1,9 @@
+//import React from "react";
+import { JSX } from "react";
+import { Text } from "react-native";
+import { useTranslation } from "react-i18next";
+
+export function Step_2(): JSX.Element {
+  const { t } = useTranslation(); // по умолчанию namespace "translation"
+  return <Text>{t("_step_2")}</Text>;
+}

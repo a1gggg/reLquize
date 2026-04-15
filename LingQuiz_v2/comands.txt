@@ -27,7 +27,15 @@ git commit -m "  Resizing Pralax and the image inside. Compatibility tests and f
 git commit -m "  We create a menu on the main page that opens a modal window."
 git commit -m "  Image resizing check on Doctor Expo - OK"
 git commit -m "  Add bottom menu and icon export from expo. Check - OK"
+git commit -m "  Add  icon on menu back export from expo. Check - OK"
 https://icons.expo.fyi/Index
+
+npm install i18next react-i18next expo-localization @react-native-async-storage/async-storage
+Инсталяция компонентов для интерфейса смены языка
+npm install @react-native-picker/picker
+Инсталяция пикера
+
+
 
 #2CD8CC
 --------------------
