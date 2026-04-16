@@ -1,16 +1,10 @@
-import { Link } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Link } from "expo-router";
+import { StyleSheet } from "react-native";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 
-// i18n
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "@/src/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-//import { MyScreen } from "@/components/MyScreen";
-
 
 export default function ModalScreen() {
   return (
@@ -26,8 +20,6 @@ export default function ModalScreen() {
     </ThemedView>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {

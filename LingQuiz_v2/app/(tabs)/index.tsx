@@ -1,12 +1,16 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Image } from "expo-image";
+import "@/src/i18n";
+//import i18n from "i18next";
+//import { initReactI18next } from "react-i18next";
+import { View, Platform, StyleSheet } from "react-native";
+import { HelloWave } from "@/components/hello-wave";
+import ParallaxScrollView from "@/components/parallax-scroll-view";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
 import { Link, useRouter } from "expo-router";
 import { HeaderButton } from "@/components/menuIndexPage/menuIndexPageHeaderButton";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import React from "react";
 
 
 export default function HomeScreen() {
@@ -23,7 +27,6 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        
         <HeaderButton
           onPress={() => router.push("/Menu")}
           icon={require("@/assets/images/menu.png")}
@@ -94,6 +97,14 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
+  );
+}
+
+export function SettingsScreen() {
+  return (
+    <View>
+      <LanguageSwitcher />
+    </View>
   );
 }
 

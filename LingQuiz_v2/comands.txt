@@ -34,8 +34,16 @@ npm install i18next react-i18next expo-localization @react-native-async-storage/
 Инсталяция компонентов для интерфейса смены языка
 npm install @react-native-picker/picker
 Инсталяция пикера
+Удалил npm uninstall @types/react-native  из строки devDependencies в pacage.json, чтобы убрато ошибку доктора - убралась
+Удалить пакеты, которые не используются npm prune
+проверить npm ls @types/react-native
+Имеем ошибку по i18 next
+npm install i18next react-i18next
+npm install expo-localization @react-native-async-storage/async-storage
+Исправил ошибки, добавил загрузку до экрана в лайоут основной
+все запускается, ошибок нет. Язык меняется, но при частым использованиий приложение падает!!!!
 
-
+git commit -m "  Fixed bugs, added loading to the main layout. Everything works fine, no errors. The language changes, but the app crashes with frequent use!"
 
 #2CD8CC
 --------------------

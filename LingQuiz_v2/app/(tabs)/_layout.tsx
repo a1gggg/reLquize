@@ -1,6 +1,5 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
@@ -12,7 +11,7 @@ import {
   Kanji,
   Games,
 } from "@/src/locales/interfaceTextComponents/FooterMenu";
-
+  
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
