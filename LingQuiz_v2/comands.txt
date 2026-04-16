@@ -54,7 +54,7 @@ git commit -m "Adding a raw Memory game for Kanji. No crits. Tests passed."
 
 Удаляем проект v1
 git commit -m "Delete project v1"
-git commit -m "Delete project v1 - double commit"
+git commit -m "Delete project v1 - double commit_2"
 
 #2CD8CC
 --------------------
