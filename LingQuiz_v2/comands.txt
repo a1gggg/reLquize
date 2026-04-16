@@ -44,6 +44,11 @@ npm install expo-localization @react-native-async-storage/async-storage
 все запускается, ошибок нет. Язык меняется, но при частым использованиий приложение падает!!!!
 
 git commit -m "  Fixed bugs, added loading to the main layout. Everything works fine, no errors. The language changes, but the app crashes with frequent use!"
+**********
+Изменение высоты значка закрытия в меню(модальном окне)
+Добавление перевода модального меню на главной странице - тесты - ОК
+git commit -m "Adding a translation to the modal menu on the homepage - tests - OK"
+
 
 #2CD8CC
 --------------------
