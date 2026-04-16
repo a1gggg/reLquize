@@ -7,9 +7,9 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
-import { Link } from "expo-router";
+import GameScreen from '@/src/screens/GameScreen';
 
-export default function TabTwoScreen() {
+export default function GameScreenMemory() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -22,23 +22,8 @@ export default function TabTwoScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}
-        >
-          Games
-        </ThemedText>
-      </ThemedView>
-      <ThemedText>
-        This app includes example code to help you get started.
-      </ThemedText>
 
-      <Link href="/MemoryGame" dismissTo style={styles.link_games}>
-        <ThemedText type="link_games">Memory Game</ThemedText>
-      </Link>
+    <GameScreen />
     </ParallaxScrollView>
   );
 }
@@ -49,21 +34,5 @@ const styles = StyleSheet.create({
     bottom: -90,
     left: -35,
     position: "absolute",
-  },
-  titleContainer: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  link: {
-    marginTop: 10,
-    marginLeft: 1,
-    alignItems: "baseline",
-    paddingBottom: "auto",
-  },
-  link_games: {
-    marginTop: 10,
-    marginLeft: 1,
-    alignItems: "baseline",
-    paddingBottom: "auto",
   },
 });

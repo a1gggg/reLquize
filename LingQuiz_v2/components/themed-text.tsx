@@ -5,7 +5,7 @@ import { useThemeColor } from '@/hooks/use-theme-color';
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
   darkColor?: string;
-  type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link" | "link_back";
+  type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link" | "link_back" | "link_games";
 };
 
 export function ThemedText({
@@ -27,6 +27,7 @@ export function ThemedText({
         type === "subtitle" ? styles.subtitle : undefined,
         type === "link" ? styles.link : undefined,
         type === "link_back" ? styles.link_back : undefined,
+        type === "link_games" ? styles.link_games : undefined,
         style,
       ]}
       {...rest}
@@ -66,5 +67,11 @@ const styles = StyleSheet.create({
     //backgroundColor: "#2CD8CC",
     //marginBottom: 15,
     // paddingVertical: 15,
+  },
+  link_games: {
+    lineHeight: 30,
+    fontSize: 25,
+    color: "#2CD8CC",
+    fontWeight: "900",
   },
 });
