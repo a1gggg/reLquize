@@ -8,17 +8,14 @@ import { Text } from "react-native"; // если нужно
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 
-// i18n
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "@/src/i18n";
-
+ 
 // Компоненты
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { HelloWave } from "@/components/hello-wave";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-//import { MyScreen } from "@/components/MyScreen";
+
 import { Step_1 } from "@/src/locales/interfaceTextComponents/Step1";
 import { Step_2 } from "@/src/locales/interfaceTextComponents/Step2";
 import { Step_3 } from "@/src/locales/interfaceTextComponents/Step3";

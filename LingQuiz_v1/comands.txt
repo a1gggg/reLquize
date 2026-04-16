@@ -6,6 +6,13 @@ git commit -m ""
 git push
 
 
+npx expo doctor  проверка конфликтов
+npx expo start -c      перезапуск
+npx expo install --check проверить ошибки в зависимостях
+npm ls  проверить ошибки в зависимостях
+npm dedupe конфликты в ноде модулях
+
+
 - cd LingQuiz_v2
 - npm run android
 - npm run ios # you need to use macOS to build the iOS project - use the Expo app if you need to do iOS development without a Mac
