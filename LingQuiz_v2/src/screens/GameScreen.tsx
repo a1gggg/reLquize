@@ -66,12 +66,6 @@ export default function GameScreen() {
 
   return (
     <View style={{ padding: "1%" }}>
-      <Link href="/games" dismissTo style={styles.link}>
-        <ThemedText type="link_back">
-          <IconSymbol size={38} name="square.and.pencil" color={""} />
-          <ThemedText type="link_games">{"<"}</ThemedText>
-        </ThemedText>
-      </Link>
       <Text>Ходы: {moves}</Text>
       <Text>Лучший результат: {best ?? "-"}</Text>
 
@@ -79,6 +73,12 @@ export default function GameScreen() {
 
       <Button title="Перезапустить" onPress={restart} />
       <Button title="Сбросить рекорд" onPress={resetScore} />
+      <Link href="/games" dismissTo style={styles.link}>
+        <ThemedText type="link_back">
+          <IconSymbol size={38} name="square.and.pencil" color={""} />
+          <ThemedText type="link_games">{"<"}</ThemedText>
+        </ThemedText>
+      </Link>
     </View>
   );
 }

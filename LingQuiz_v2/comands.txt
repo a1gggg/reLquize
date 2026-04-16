@@ -55,6 +55,10 @@ git commit -m "Adding a raw Memory game for Kanji. No crits. Tests passed."
 Удаляем проект v1
 git commit -m "Delete project v1"
 git commit -m "Delete project v1 - double commit_2"
+Изменение страницы Games на модальное окно
+git commit -m "Changing the Games page to a modal window"
+
+
 
 #2CD8CC
 --------------------

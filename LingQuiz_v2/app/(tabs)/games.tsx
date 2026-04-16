@@ -1,69 +1,93 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
-import { Link } from "expo-router";
 
-export default function TabTwoScreen() {
+import { Image } from "expo-image";
+import "@/src/i18n";
+import { View, Platform, StyleSheet } from "react-native";
+import { HelloWave } from "@/components/hello-wave";
+import ParallaxScrollView from "@/components/parallax-scroll-view";
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
+import { Link, useRouter } from "expo-router";
+import { IconSymbol } from "@/components/ui/icon-symbol";
+import { Colors } from "@/constants/theme";
+import React from "react";
+
+export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
+      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          source={require("@/assets/images/partial-react-logo.png")}
+          style={styles.reactLogo}
+          contentFit="contain"
         />
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}
-        >
-          Games
-        </ThemedText>
+        <ThemedText type="title">Games</ThemedText>
+        <HelloWave />
       </ThemedView>
-      <ThemedText>
-        This app includes example code to help you get started.
-      </ThemedText>
 
-      <Link href="/MemoryGame" dismissTo style={styles.link_games}>
-        <ThemedText type="link_games">Memory Game</ThemedText>
-      </Link>
+      <ThemedView style={styles.stepContainer}>
+        <Link href="/MemoryGame">
+          <Link.Trigger>
+            <ThemedText type="subtitle" style={styles.stepContainer}>
+              {" "}
+              <IconSymbol
+                size={28}
+                name="character.textbox"
+                color={""}
+                style={styles.reactLogo}
+              />{" "}
+              Memory Game
+            </ThemedText>
+          </Link.Trigger>
+          <Link.Preview />
+          <Link.Menu>
+            <Link.MenuAction
+              title="Action"
+              icon="cube"
+              onPress={() => alert("Action pressed")}
+            />
+            <Link.MenuAction
+              title="Share"
+              icon="square.and.arrow.up"
+              onPress={() => alert("Share pressed")}
+            />
+            <Link.Menu title="More" icon="ellipsis">
+              <Link.MenuAction
+                title="Delete"
+                icon="trash"
+                destructive
+                onPress={() => alert("Delete pressed")}
+              />
+            </Link.Menu>
+          </Link.Menu>
+        </Link>
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: "#808080",
-    bottom: -90,
-    left: -35,
-    position: "absolute",
-  },
   titleContainer: {
     flexDirection: "row",
+    alignItems: "center",
+    gap: 1,
+  },
+  stepContainer: {
     gap: 8,
+    marginBottom: 8,
+    top: "10%",
+    left: "10%",
+    color: "#898b88",
   },
-  link: {
-    marginTop: 10,
-    marginLeft: 1,
-    alignItems: "baseline",
-    paddingBottom: "auto",
-  },
-  link_games: {
-    marginTop: 10,
-    marginLeft: 1,
-    alignItems: "baseline",
-    paddingBottom: "auto",
+  reactLogo: {
+    color: "rgb(214, 10, 10)",
+    height: "100%",
+    width: "45%",
+    bottom: "10%",
+    top: "10%",
+    left: 0,
   },
 });
