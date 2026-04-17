@@ -68,8 +68,16 @@ git commit -m "Changing the Games page to a modal window"
 
  Убрал неиспользованные импорты git commit -m "removed imports that are not used"
 >
+
 Добавление комплексной проверки npm run check-all
 git commit -m "CAdding Due Diligence   npm run check-all"
+>
+
+Добавил локализацию тайтлов первых страниц.
+git commit -m "Added localization of first page titles."
+>
+
+
 
 #2CD8CC
 --------------------

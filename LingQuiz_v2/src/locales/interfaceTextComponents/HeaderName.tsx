@@ -6,27 +6,27 @@ import { useTranslation } from "react-i18next";
 
 type Props = { style?: TextStyle };
 
-export function Home({ style }: Props): JSX.Element {
+export function Home_H({ style }: Props): JSX.Element {
   const { t } = useTranslation();
   return <Text style={[styles.base, styles.home, style]}>{t("_home")}</Text>;
 }
 
-export function List({ style }: Props): JSX.Element {
+export function List_H({ style }: Props): JSX.Element {
   const { t } = useTranslation();
   return <Text style={[styles.base, styles.list, style]}>{t("_list")}</Text>;
 }
 
-export function Words({ style }: Props): JSX.Element {
+export function Words_H({ style }: Props): JSX.Element {
   const { t } = useTranslation();
   return <Text style={[styles.base, styles.words, style]}>{t("_words")}</Text>;
 }
 
-export function Kanji({ style }: Props): JSX.Element {
+export function Kanji_H({ style }: Props): JSX.Element {
   const { t } = useTranslation();
   return <Text style={[styles.base, styles.kanji, style]}>{t("_kanji")}</Text>;
 }
 
-export function Games({ style }: Props): JSX.Element {
+export function Games_H({ style }: Props): JSX.Element {
   const { t } = useTranslation();
   return <Text style={[styles.base, styles.games, style]}>{t("_games")}</Text>;
 }
@@ -37,16 +37,16 @@ const styles = StyleSheet.create({
     includeFontPadding: false,
   },
   home: {
-    fontSize: 50,
+    fontSize: 30,
   },
   list: {
-    fontSize: 50,
+    fontSize: 30,
   },
   words: {
-    fontSize: 50,
+    fontSize: 30,
   },
   kanji: {
-    fontSize: 50,
+    fontSize: 30,
   },
   games: {
     fontSize: 30,

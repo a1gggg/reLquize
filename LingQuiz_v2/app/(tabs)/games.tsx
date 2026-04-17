@@ -8,6 +8,7 @@ import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { Link } from "expo-router";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { Games_H } from "@/src/locales/interfaceTextComponents/HeaderName";
 
 
 export default function HomeScreen() {
@@ -23,7 +24,7 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Games</ThemedText>
+        <ThemedText type="title"><Games_H /></ThemedText>
         <HelloWave />
       </ThemedView>
 
