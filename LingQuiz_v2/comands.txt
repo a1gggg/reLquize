@@ -68,14 +68,22 @@ git commit -m "Changing the Games page to a modal window"
 
  Убрал неиспользованные импорты git commit -m "removed imports that are not used"
 >
-
+Добавление комплексной проверки npm run check-all
+git commit -m "CAdding Due Diligence   npm run check-all"
 
 #2CD8CC
 --------------------
-npx expo doctor  проверка конфликтов
+npx expo-doctor  проверка конфликтов
 npx expo start -c      перезапуск
 npx expo install --check проверить ошибки в зависимостях
 npm ls  проверить ошибки в зависимостях
 npm dedupe конфликты в node модулях
+npx tsc --noEmit  Проверка TypeScript‑компонентов
+npx eslint . Проверка ESLint (качество кода + ошибки)
+npm audit Проверка уязвимостей Node.js
+node --trace-warnings file.js Проверка ошибок исполнения (runtime)
+npx eslint . --ext .js,.ts,.tsx Проверка импортов и путей
+npx tsc --noEmit   Проверка структуры проекта
+npm run check-all - проверить все
 ---------------------
-
+ 
