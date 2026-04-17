@@ -10,7 +10,7 @@ import { ThemedView } from "@/components/themed-view";
 import { Link, useRouter } from "expo-router";
 import { HeaderButton } from "@/components/menuIndexPage/menuIndexPageHeaderButton";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import React from "react";
+//import React from "react";
 
 
 export default function HomeScreen() {

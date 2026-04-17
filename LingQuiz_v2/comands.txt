@@ -23,7 +23,7 @@ npx expo install expo-video
 исправляем все ошибки в файле hellowave
 git commit -m "  We correct all errors in the files hello-wave animated"
 git commit -m "  Resizing Pralax and the image inside. Compatibility tests and fixes."
-//Скрываем хеадер с помощью изменения его высоты на 0. см паралакс скрол виев в компонентах
+//Скрываем header с помощью изменения его высоты на 0. см паралакс scroll view в компонентах
 git commit -m "  We create a menu on the main page that opens a modal window."
 git commit -m "  Image resizing check on Doctor Expo - OK"
 git commit -m "  Add bottom menu and icon export from expo. Check - OK"
@@ -34,14 +34,14 @@ npm install i18next react-i18next expo-localization @react-native-async-storage/
 Инсталяция компонентов для интерфейса смены языка
 npm install @react-native-picker/picker
 Инсталяция пикера
-Удалил npm uninstall @types/react-native  из строки devDependencies в pacage.json, чтобы убрато ошибку доктора - убралась
+Удалил npm uninstall @types/react-native  из строки devDependencies в pacage.json, чтобы убрать ошибку доктора - убралась
 Удалить пакеты, которые не используются npm prune
 проверить npm ls @types/react-native
 Имеем ошибку по i18 next
 npm install i18next react-i18next
 npm install expo-localization @react-native-async-storage/async-storage
-Исправил ошибки, добавил загрузку до экрана в лайоут основной
-все запускается, ошибок нет. Язык меняется, но при частым использованиий приложение падает!!!!
+Исправил ошибки, добавил загрузку до экрана в layout основной
+все запускается, ошибок нет. Язык меняется, но при частым использовании приложение падает!!!!
 
 git commit -m "  Fixed bugs, added loading to the main layout. Everything works fine, no errors. The language changes, but the app crashes with frequent use!"
 **********
@@ -50,7 +50,7 @@ git commit -m "  Fixed bugs, added loading to the main layout. Everything works 
 git commit -m "Adding a translation to the modal menu on the homepage - tests - OK"
 ***********\
 Добавляем сырую игру Memory для канджи. Попа без критов. Тесты пройдены.
-git commit -m "Adding a raw Memory game for Kanji. No crits. Tests passed."
+git commit -m "Adding a raw Memory game for Kanji. No crit. Tests passed."
 
 Удаляем проект v1
 git commit -m "Delete project v1"
@@ -58,6 +58,16 @@ git commit -m "Delete project v1 - double commit_2"
 Изменение страницы Games на модальное окно
 git commit -m "Changing the Games page to a modal window"
 
+******
+17/04
+  "__comment": [
+    "extends: expo-module-scripts/tsconfig.base"
+  ], закоментировал чтобы заменить на "extends": "expo/tsconfig.base", и убрать ошибку. 
+  C:\Users\velik\reLquize\LingQuiz_v2\node_modules\expo-image\tsconfig.json
+>
+
+ Убрал неиспользованные импорты git commit -m "removed imports that are not used"
+>
 
 
 #2CD8CC
@@ -66,6 +76,6 @@ npx expo doctor  проверка конфликтов
 npx expo start -c      перезапуск
 npx expo install --check проверить ошибки в зависимостях
 npm ls  проверить ошибки в зависимостях
-npm dedupe конфликты в ноде модулях
+npm dedupe конфликты в node модулях
 ---------------------
 

@@ -1,15 +1,14 @@
 
 import { Image } from "expo-image";
 import "@/src/i18n";
-import { View, Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { HelloWave } from "@/components/hello-wave";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { Link, useRouter } from "expo-router";
+import { Link } from "expo-router";
 import { IconSymbol } from "@/components/ui/icon-symbol";
-import { Colors } from "@/constants/theme";
-import React from "react";
+
 
 export default function HomeScreen() {
   return (

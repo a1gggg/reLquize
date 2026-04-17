@@ -8,6 +8,7 @@ import { Link } from "expo-router";
 import { ThemedText } from "@/components/themed-text";
 import { IconSymbol } from "@/components/ui/icon-symbol.ios";
 
+
 const IMAGES = [
   "https://i.imgur.com/1.png",
   "https://i.imgur.com/2.png",

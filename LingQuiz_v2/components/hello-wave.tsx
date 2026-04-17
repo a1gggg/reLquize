@@ -19,7 +19,7 @@ export function HelloWave() {
 }
 */
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Animated, Easing, Pressable, View, StyleSheet } from "react-native";
 import * as Haptics from "expo-haptics";
 import { useAudioPlayer } from "expo-audio";
