@@ -77,6 +77,10 @@ git commit -m "CAdding Due Diligence   npm run check-all"
 git commit -m "Added localization of first page titles."
 >
 
+Исправил отображение высоты тайтлов первых страниц.
+git commit -m "Fixed the display of the height of the first page titles."
+>
+
 
 
 #2CD8CC
