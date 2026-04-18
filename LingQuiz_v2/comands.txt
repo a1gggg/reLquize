@@ -80,6 +80,10 @@ git commit -m "Added localization of first page titles."
 Исправил отображение высоты тайтлов первых страниц.
 git commit -m "Fixed the display of the height of the first page titles."
 >
+Была ошибка в pacage.json на версию тайпскрипта
+npm install --save-dev typescript@latest   оновили
+git commit -m "Fixed the TS save-dev typescript@lates."
+>
 
 
 
@@ -97,5 +101,7 @@ node --trace-warnings file.js Проверка ошибок исполнения
 npx eslint . --ext .js,.ts,.tsx Проверка импортов и путей
 npx tsc --noEmit   Проверка структуры проекта
 npm run check-all - проверить все
+
+git branch -d B1 - удалить ветку B1
 ---------------------
  
