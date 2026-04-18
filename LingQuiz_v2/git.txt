@@ -1,0 +1,23 @@
+Откатить к последней удаленной ветке
+git status Проверить статус
+git branch Проверить имя текущей ветки локально
+git branch -r Проверить имя текущей ветки на удаленном
+git reset --hard HEAD   Удалить ВСЕ локальные изменения
+git fetch origin
+git reset --hard origin/main
+git clean -fd далить неотслеживаемые файлы (включая мусор)
+npm install  Установить зависимости заново
+>
+
+Удалить локальную ветку
+git branch -d имя_ветки
+или если git дает ошибку git branch -D имя_ветки
+
+Удалить   ветку на сервере
+git push origin --delete имя_ветки
+>
+
+Создать ветку‑копию от текущего состояния main:
+git checkout main
+git pull
+git checkout -b 
