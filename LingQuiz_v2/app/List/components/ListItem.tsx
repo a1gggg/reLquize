@@ -1,7 +1,7 @@
 // components/ListItem.tsx
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import type { Pair } from "../store/listsStore";
+import type { Pair } from "../../../components/store/listsStore";
 
 type Props = {
   pair: Pair;

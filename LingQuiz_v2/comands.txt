@@ -113,3 +113,14 @@ git branch -d B1 - удалить ветку B1
  Подключил тесты
  Обновил зависимости.
  Тесты пройдены
+
+git commit -m "                           
+>> I connected the lists
+>>  I connected the tests
+>>  Updated dependencies.
+>>  The tests are passed"
+
+ >
+Пофиксил ошибку експорта файла с app - переместив в другую перезапуск.
+Добавлена функция обмена местами ключ-значение
+
