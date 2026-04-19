@@ -34,6 +34,7 @@ export default function RootLayout() {
 */
 
 // app/_layout.tsx или файл, где у вас RootLayout с запуком чекинга языка
+import "react-native-get-random-values"; // полифилл для uuid — должен быть импортирован первым
 import React, { useEffect, useState } from "react";
 import {
   DarkTheme,
