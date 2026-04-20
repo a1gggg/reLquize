@@ -20,4 +20,6 @@ git push origin --delete имя_ветки
 Создать ветку‑копию от текущего состояния main:
 git checkout main
 git pull
-git checkout -b 
+git checkout -b имя_новой_ветки origin/main
+
+>
