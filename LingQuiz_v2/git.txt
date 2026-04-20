@@ -21,3 +21,9 @@ git push origin --delete имя_ветки
 git checkout main
 git pull
 git checkout -b 
+
+>
+Слияние 
+git merge // быть на main
+git merge origin/Create_List 
+
