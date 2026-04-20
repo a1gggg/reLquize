@@ -133,3 +133,5 @@ git merge main/Create_List
 Удалить Create_List
 git branch -D Create_List
 git push origin --delete Create_List
+
+git commit -m "Delete marge Create_List"
