@@ -23,6 +23,7 @@ git pull
 git checkout -b 
 git checkout -b feature/CreateList 
 git checkout -b origin/feature/CreateList
+git push --set-upstream origin feature/CreateList
 
 >
 Слияние 
