@@ -135,3 +135,15 @@ git branch -D Create_List
 git push origin --delete Create_List
 
 git commit -m "Delete marge Create_List"
+
+>
+Создание сохранения списка локально и на гд
+npx expo install expo-file-system expo-sharing expo-document-picker expo-auth-session
+expo install expo-file-system
+expo install expo-file-system expo-sharing  // инсталяция для проверики файловой системы в експорт
+npx expo expo-sharing    
+
+
+utils/listExport.ts  // Утилита для экспорта в TXT и шаринга — utils/listExport.ts
+app/BackupTxt.tsx  //Экран/компонент для кнопок «Сохранить» и «Поделиться» — app/BackupTxt.tsx (пример)
+Добавлена функция импорт, експорт, поделиться - НЕ РАБОТАЮТ. Нужно смотреть в готовом приложении.

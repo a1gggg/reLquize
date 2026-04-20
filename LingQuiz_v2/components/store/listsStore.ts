@@ -65,10 +65,16 @@ type Store = {
   lists: KVList[];
   addList: (title: string) => void;
   addPair: (listId: string, key: string, value: string) => void;
-  updatePair: (listId: string, pairId: string, key: string, value: string) => void;
+  updatePair: (
+    listId: string,
+    pairId: string,
+    key: string,
+    value: string,
+  ) => void;
   deletePair: (listId: string, pairId: string) => void;
   deleteList: (listId: string) => void;
   swapPairs: (listId: string) => void; // <-- новая функция
+  setLists: (newLists: KVList[]) => void; // ← типизация здесь
 };
 
 export const useListsStore = create<Store>((set) => ({
@@ -82,7 +88,9 @@ export const useListsStore = create<Store>((set) => ({
   addPair: (listId, key, value) =>
     set((s) => ({
       lists: s.lists.map((l) =>
-        l.id === listId ? { ...l, items: [...l.items, { id: uuidv4(), key, value }] } : l
+        l.id === listId
+          ? { ...l, items: [...l.items, { id: uuidv4(), key, value }] }
+          : l,
       ),
     })),
 
@@ -90,15 +98,22 @@ export const useListsStore = create<Store>((set) => ({
     set((s) => ({
       lists: s.lists.map((l) =>
         l.id === listId
-          ? { ...l, items: l.items.map((p) => (p.id === pairId ? { ...p, key, value } : p)) }
-          : l
+          ? {
+              ...l,
+              items: l.items.map((p) =>
+                p.id === pairId ? { ...p, key, value } : p,
+              ),
+            }
+          : l,
       ),
     })),
 
   deletePair: (listId, pairId) =>
     set((s) => ({
       lists: s.lists.map((l) =>
-        l.id === listId ? { ...l, items: l.items.filter((p) => p.id !== pairId) } : l
+        l.id === listId
+          ? { ...l, items: l.items.filter((p) => p.id !== pairId) }
+          : l,
       ),
     })),
 
@@ -115,7 +130,11 @@ export const useListsStore = create<Store>((set) => ({
               ...l,
               items: l.items.map((p) => ({ ...p, key: p.value, value: p.key })),
             }
-          : l
+          : l,
       ),
+    })),
+  setLists: (newLists: KVList[]) =>
+    set(() => ({
+      lists: newLists,
     })),
 }));

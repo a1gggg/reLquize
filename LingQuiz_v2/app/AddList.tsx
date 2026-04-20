@@ -7,6 +7,8 @@ import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { List_H } from "@/src/locales/interfaceTextComponents/HeaderName";
 import Home from "./List/app/index";
+import BackupTxtScreen from "./BackupTxt";
+
 
 export default function ModalScreen() {
   const scheme = useColorScheme(); // 'light' | 'dark' | null
@@ -33,6 +35,7 @@ export default function ModalScreen() {
             type="subtitle"
             style={[styles.stepText, { color: pageTextColor }]}
           >
+            <BackupTxtScreen />
             <Home />
           </ThemedText>
         </View>
@@ -62,12 +65,15 @@ const styles = StyleSheet.create({
   },
   stepContainer: {
     //paddingHorizontal: 16,
-    paddingTop: 12,
-    //gap: 8,
-    //marginBottom: 8,
+    paddingTop: "0%",
+    width: "90%",
+    bottom: "7%",
   },
   stepText: {
     //color: "#898b88",
+    height: "91%",
+    //maxHeight: "90%",
+    //minHeight: "90%",
   },
   reactLogo: {
     //height: 80,
@@ -77,6 +83,6 @@ const styles = StyleSheet.create({
     //marginRight: 6,
   },
   linkWrap: {
-    //alignSelf: "flex-start",
+    bottom: "1%",
   },
 });
