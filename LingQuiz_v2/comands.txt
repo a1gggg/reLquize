@@ -126,4 +126,10 @@ git commit -m "
 git commit -m " Added key-value swap function"
 
  >
- 
+ Слил ветку Create_List c main
+git merge // быть на main
+git merge main/Create_List 
+
+Удалить Create_List
+git branch -D Create_List
+git push origin --delete Create_List
