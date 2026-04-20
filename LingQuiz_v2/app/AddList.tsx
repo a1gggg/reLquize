@@ -5,8 +5,8 @@ import "@/src/i18n";
 import { HelloWave } from "@/components/hello-wave";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { Words_H } from "@/src/locales/interfaceTextComponents/HeaderName";
-import AllTestsPage from "../List/components/TestList";
+import { List_H } from "@/src/locales/interfaceTextComponents/HeaderName";
+import Home from "./List/app/index";
 
 export default function ModalScreen() {
   const scheme = useColorScheme(); // 'light' | 'dark' | null
@@ -22,7 +22,7 @@ export default function ModalScreen() {
 
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">
-          <Words_H />
+          <List_H />
         </ThemedText>
         <HelloWave />
       </ThemedView>
@@ -33,7 +33,7 @@ export default function ModalScreen() {
             type="subtitle"
             style={[styles.stepText, { color: pageTextColor }]}
           >
-            <AllTestsPage />
+            <Home />
           </ThemedText>
         </View>
       </ThemedView>
@@ -43,7 +43,7 @@ export default function ModalScreen() {
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    //flex: 1,
   },
   headerImageWrap: {
     //width: "100%",
@@ -54,17 +54,17 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: "row",
-    // alignItems: "center",
+    alignItems: "center",
     paddingLeft: "8%",
-    //gap: 1,
+    gap: 1,
     //paddingHorizontal: 16,
-    paddingTop: "8%",
+    paddingTop: "1%",
   },
   stepContainer: {
-    paddingHorizontal: "8%",
-    paddingTop: "1%",
+    //paddingHorizontal: 16,
+    paddingTop: 12,
     //gap: 8,
-    //marginBottom: 8,    
+    //marginBottom: 8,
   },
   stepText: {
     //color: "#898b88",
@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
   reactLogo: {
     //height: 80,
     //width: "45%",
-    
   },
   icon: {
     //marginRight: 6,

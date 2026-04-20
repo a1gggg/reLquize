@@ -105,4 +105,25 @@ npm run check-all - проверить все
 git branch -d B1 - удалить ветку B1
 ---------------------
  
+ >
+ Добавляем функцинал по тесту
+ npm install uuid react-native-get-random-values zustand   --- устанавливаем зависимости
+ подключаем index с таблицами к странице list
+ Подключил списки
+ Подключил тесты
+ Обновил зависимости.
+ Тесты пройдены
+
+git commit -m "                           
+>> I connected the lists
+>>  I connected the tests
+>>  Updated dependencies.
+>>  The tests are passed"
+
+ >
+Пофиксил ошибку експорта файла с app - переместив в другую перезапуск.
+Добавлена функция обмена местами ключ-значение
+git commit -m " Added key-value swap function"
+
+ >
  

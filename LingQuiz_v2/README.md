@@ -48,3 +48,45 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Development
+
+1 - Language change
+File tree
+|***app/Menu
+|***components/LanguageSwitcer
+|***components/MyScreen
+|***src/locales/interfaceTextComponents/FooterMenu
+|***src/locales/interfaceTextComponents/HeaderName
+|***src/locales/interfaceTextComponents/Hi!
+|***src/locales/interfaceTextComponents/Step1
+|***src/locales/interfaceTextComponents/Step2
+|***src/locales/interfaceTextComponents/Step3
+|***src/locales/interfaceTextComponents/СhangeLanguage
+|***src/locales/en
+|***src/locales/ru
+|***src/locales/uk
+|***src/App
+|\*\*\*src/i18n
+
+2 - Lists & quiz
+File tree
+|***app/List/app/index
+|***app/List/components/KeyValueEditor
+|***app/List/components/ListItem
+|***app/List/components/TestList
+|***app/YouTest
+|***app/(tabs)/list
+|***app/AddList
+|***components/store/listsStore
+
+3 - Game
+File tree
+|***app/(tabs)/games
+|***app/MemoryGame
+|***src/components/Card
+|***src/components/Grid
+|***src/game/engine
+|***src/game/types
+|***src/screens/GameScreen
+|***src/storage/scores
