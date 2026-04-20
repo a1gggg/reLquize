@@ -21,7 +21,8 @@ git push origin --delete имя_ветки
 git checkout main
 git pull
 git checkout -b 
-git checkout -b feature/CreateList origin/feature/CreateList
+git checkout -b feature/CreateList 
+git checkout -b origin/feature/CreateList
 
 >
 Слияние 
